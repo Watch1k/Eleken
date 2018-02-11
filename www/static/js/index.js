@@ -348,8 +348,6 @@ var Header = function () {
 	_createClass(Header, [{
 		key: 'init',
 		value: function init() {
-			if (_helpers.Resp.isDesk) return;
-
 			this.prepareBurgerAnim();
 			this.prepareNavAnim();
 			this.bindEvents();
