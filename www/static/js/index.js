@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -317,196 +317,6 @@ var detectIE = exports.detectIE = function detectIE() {
 "use strict";
 
 
-/**
- * App entry point.
- *
- * @module App
- */
-
-/** Import initialized-by-default modules/libs */
-
-__webpack_require__(2);
-
-__webpack_require__(3);
-
-__webpack_require__(5);
-
-var _Header = __webpack_require__(6);
-
-var _helpers = __webpack_require__(0);
-
-/** Import page controllers */
-//import Home from './pages/Home';
-
-/**
- * Run appropriate scripts for each page.
- **/
-switch (_helpers.currentPage) {
-	/** Home page */
-	//case 'home':
-	//	new Home;
-	//	break;
-
-	/** No page found */
-	default:
-		console.warn('Undefined page');
-}
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-/**
- * Website's common scripts.
- *
- * @module Common
- */
-
-var Common = exports.Common = function () {
-	function Common() {
-		_classCallCheck(this, Common);
-
-		this.init();
-	}
-
-	_createClass(Common, [{
-		key: "init",
-		value: function init() {}
-	}]);
-
-	return Common;
-}();
-
-exports.default = new Common();
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-exports.PublicAPI = undefined;
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * Website's public API.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * Make some functions and methods accessible in global scope.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * @module PublicAPI
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      */
-
-var _Header = __webpack_require__(6);
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var PublicAPI = exports.PublicAPI = function () {
-	function PublicAPI() {
-		_classCallCheck(this, PublicAPI);
-	}
-
-	_createClass(PublicAPI, null, [{
-		key: 'Nav',
-
-		/**
-   * Some of 'Header' module public methods.
-   *
-   * PublicAPI.Nav.open() - open navigation
-   * PublicAPI.Nav.close() - close navigation
-   * PublicAPI.Nav.toggle() - toggle navigation
-   *
-   * @return {{open: function(), close: function(), toggle: function()}}
-   */
-		get: function get() {
-			var openNav = function openNav() {
-				return _Header.HeaderAPI.toggleMenu('open');
-			};
-			var closeNav = function closeNav() {
-				return _Header.HeaderAPI.toggleMenu('close');
-			};
-			var toggleNav = function toggleNav() {
-				return _Header.HeaderAPI.toggleMenu();
-			};
-
-			return {
-				open: openNav,
-				close: closeNav,
-				toggle: toggleNav
-			};
-		}
-	}]);
-
-	return PublicAPI;
-}();
-
-/** Expose Public API */
-
-
-exports.default = window.PublicAPI = PublicAPI;
-
-/***/ }),
-/* 4 */,
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _helpers = __webpack_require__(0);
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var NoTouch = function () {
-	function NoTouch() {
-		_classCallCheck(this, NoTouch);
-
-		NoTouch.init();
-	}
-
-	_createClass(NoTouch, null, [{
-		key: 'init',
-		value: function init() {
-			var body = document.querySelector('body');
-			var toggleNoTouch = function toggleNoTouch() {
-				_helpers.Resp.isDesk ? body.classList.add(_helpers.css.noTouch) : body.classList.remove(_helpers.css.noTouch);
-			};
-
-			toggleNoTouch();
-			window.addEventListener('resize', (0, _helpers.debounce)(toggleNoTouch, this, 250));
-		}
-	}]);
-
-	return NoTouch;
-}();
-
-exports.default = new NoTouch();
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
@@ -516,7 +326,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _helpers = __webpack_require__(0);
 
-var _gsap = __webpack_require__(7);
+var _gsap = __webpack_require__(5);
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
@@ -645,7 +455,154 @@ var Header = function () {
 var HeaderAPI = exports.HeaderAPI = new Header();
 
 /***/ }),
-/* 7 */
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * App entry point.
+ *
+ * @module App
+ */
+
+/** Import initialized-by-default modules/libs */
+
+__webpack_require__(3);
+
+__webpack_require__(4);
+
+__webpack_require__(7);
+
+var _Header = __webpack_require__(1);
+
+var _helpers = __webpack_require__(0);
+
+/** Import page controllers */
+//import Home from './pages/Home';
+
+/**
+ * Run appropriate scripts for each page.
+ **/
+switch (_helpers.currentPage) {
+	/** Home page */
+	//case 'home':
+	//	new Home;
+	//	break;
+
+	/** No page found */
+	default:
+		console.warn('Undefined page');
+}
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+/**
+ * Website's common scripts.
+ *
+ * @module Common
+ */
+
+var Common = exports.Common = function () {
+	function Common() {
+		_classCallCheck(this, Common);
+
+		this.init();
+	}
+
+	_createClass(Common, [{
+		key: "init",
+		value: function init() {}
+	}]);
+
+	return Common;
+}();
+
+exports.default = new Common();
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.PublicAPI = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * Website's public API.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * Make some functions and methods accessible in global scope.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * @module PublicAPI
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      */
+
+var _Header = __webpack_require__(1);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var PublicAPI = exports.PublicAPI = function () {
+	function PublicAPI() {
+		_classCallCheck(this, PublicAPI);
+	}
+
+	_createClass(PublicAPI, null, [{
+		key: 'Nav',
+
+		/**
+   * Some of 'Header' module public methods.
+   *
+   * PublicAPI.Nav.open() - open navigation
+   * PublicAPI.Nav.close() - close navigation
+   * PublicAPI.Nav.toggle() - toggle navigation
+   *
+   * @return {{open: function(), close: function(), toggle: function()}}
+   */
+		get: function get() {
+			var openNav = function openNav() {
+				return _Header.HeaderAPI.toggleMenu('open');
+			};
+			var closeNav = function closeNav() {
+				return _Header.HeaderAPI.toggleMenu('close');
+			};
+			var toggleNav = function toggleNav() {
+				return _Header.HeaderAPI.toggleMenu();
+			};
+
+			return {
+				open: openNav,
+				close: closeNav,
+				toggle: toggleNav
+			};
+		}
+	}]);
+
+	return PublicAPI;
+}();
+
+/** Expose Public API */
+
+
+exports.default = window.PublicAPI = PublicAPI;
+
+/***/ }),
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -8611,10 +8568,10 @@ if (_gsScope._gsDefine) { _gsScope._gsQueue.pop()(); } //necessary in case Tween
 		_tickerActive = false; //ensures that the first official animation forces a ticker.tick() to update the time when it is instantiated
 
 })((typeof(module) !== "undefined" && module.exports && typeof(global) !== "undefined") ? global : this || window, "TweenMax");
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
 
 /***/ }),
-/* 8 */
+/* 6 */
 /***/ (function(module, exports) {
 
 var g;
@@ -8639,6 +8596,48 @@ try {
 
 module.exports = g;
 
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _helpers = __webpack_require__(0);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var NoTouch = function () {
+	function NoTouch() {
+		_classCallCheck(this, NoTouch);
+
+		NoTouch.init();
+	}
+
+	_createClass(NoTouch, null, [{
+		key: 'init',
+		value: function init() {
+			var body = document.querySelector('body');
+			var toggleNoTouch = function toggleNoTouch() {
+				_helpers.Resp.isDesk ? body.classList.add(_helpers.css.noTouch) : body.classList.remove(_helpers.css.noTouch);
+			};
+
+			toggleNoTouch();
+			window.addEventListener('resize', (0, _helpers.debounce)(toggleNoTouch, this, 250));
+		}
+	}]);
+
+	return NoTouch;
+}();
+
+exports.default = new NoTouch();
 
 /***/ })
 /******/ ]);
