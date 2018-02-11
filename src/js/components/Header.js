@@ -13,8 +13,6 @@ class Header {
 	}
 	
 	init() {
-		if (Resp.isDesk) return;
-		
 		this.prepareBurgerAnim();
 		this.prepareNavAnim();
 		this.bindEvents();
