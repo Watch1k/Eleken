@@ -1,5 +1,5 @@
-import { css, Resp } from '../modules/dev/_helpers';
 import { TimelineMax, TweenMax } from 'gsap';
+import { css } from '../modules/dev/_helpers';
 
 class Header {
 	constructor() {
