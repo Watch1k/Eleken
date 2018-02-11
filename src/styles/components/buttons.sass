@@ -1,0 +1,28 @@
+.btn
+	overflow: hidden
+	display: flex
+	align-items: center
+	justify-content: center
+	padding: 0 10px
+	height: 30px
+	+f('600',10,14,70)
+	border-radius: 4px
+	text-transform: uppercase
+	+trs
+	
+	&_white
+		color: #2985f7
+		background-color: #ffffff
+		border: 1px solid rgba(28, 27, 26, 0.1)
+		.no-touch &:hover
+			color: #ffffff
+			background-color: #2985f7
+			border-color: transparent
+	
+	&_blue
+		color: #ffffff
+		background-color: #2985f7
+		.no-touch &:hover
+			color: #2985f7
+			background-color: #ffffff
+			border: 1px solid rgba(28, 27, 26, 0.1)

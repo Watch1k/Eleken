@@ -1,0 +1,131 @@
+.table
+	$parent: &
+	padding-bottom: 85px
+	+md
+		display: none
+	
+	&__row
+		display: flex
+		justify-content: space-between
+		height: 81px
+		padding-bottom: 1px
+		border-bottom: 1px solid rgba(28, 27, 26, 0.1)
+		&_title
+			padding: 29px 0 0
+			margin-bottom: -4px
+			+bold
+			text-transform: uppercase
+			opacity: 0.4
+			height: auto
+			border-bottom: none
+		&_title #{$parent}__td
+			display: block
+		&_title #{$parent}__td_drugs
+			letter-spacing: 0.05em
+		&_title #{$parent}__td_visits
+			letter-spacing: 0.05em
+		&_title #{$parent}__td_deductible
+			letter-spacing: 0.05em
+		&_title #{$parent}__td_price
+			letter-spacing: 0.05em
+			
+	&__td
+		display: flex
+		align-items: center
+		flex: 1 0 auto
+		padding-right: 40px
+		&:last-child
+			padding-right: 0
+		&_company
+			max-width: 180px
+			width: 180px
+		&_covering
+			max-width: 114px
+			width: 114px
+		&_type
+			max-width: 107px
+			width: 107px
+		&_level
+			max-width: 175px
+			width: 175px
+		&_drugs
+			max-width: 88px
+			width: 88px
+		&_visits
+			max-width: 116px
+			width: 116px
+		&_deductible
+			max-width: 118px
+			width: 118px
+		&_price
+			max-width: 120px
+			width: 120px
+		&_controls
+		
+		&-text
+			&:not(:first-child)
+				margin-left: 5px
+		
+		&-helper
+			width: 14px
+			height: 14px
+			&:not(:first-child)
+				margin-left: 5px
+			&_info
+				cursor: pointer
+			&_color
+				overflow: hidden
+				border-radius: 50%
+			&_platinum
+				background-color: rgba(#808080, .8)
+			&_silver
+				background-color: rgba(#98B1B5, .8)
+			&_gold
+				background-color: rgba(#E79124, .8)
+			&_bronze
+				background-color: rgba(#963C11, .8)
+			&_catastrophic
+				background-color: rgba(#CA1D25, .8)
+		
+		&-company
+			display: flex
+			&-image
+				display: flex
+				flex: 1 0 auto
+				align-items: center
+				width: 40px
+				height: 40px
+				flex-basis: 40px
+				border-radius: 50%
+				overflow: hidden
+			&-right
+				padding-top: 3px
+				flex: 1 0 auto
+				padding-left: 20px
+			&-title
+				+trs
+				.no-touch &:hover
+					color: #2985f7
+			&-stars
+				margin-top: 3px
+				display: flex
+				svg
+					font-size: 12px
+					width: 12px
+					color: #ffc000
+					&:not(:first-child)
+						margin-left: 2px
+				&[data-stars='0']
+					svg
+						color: rgba(28, 27, 26, 0.15)
+				@for $i from 1 through 4
+					&[data-stars='#{$i}']
+						svg:nth-child(#{$i}) ~ svg
+							color: rgba(28, 27, 26, 0.15)
+		
+		&-btn
+			flex: 1 0 109px
+			&:not(:first-child)
+				margin-left: 5px
+				flex-basis: 68px
+		

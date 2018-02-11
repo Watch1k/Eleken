@@ -1,0 +1,101 @@
+.header
+	position: fixed
+	z-index: 100
+	top: 0
+	left: 0
+	right: 0
+	height: 70px
+	box-shadow: 0 1px 4px rgba(28, 27, 26, 0.07)
+	background-color: #ffffff
+	
+	&__container
+		height: 100%
+		+md
+			display: flex
+			align-items: center
+			justify-content: space-between
+	
+	&__logo
+		position: absolute
+		padding-left: 1px
+		z-index: 2
+		top: 0
+		left: 60px
+		height: 100%
+		display: flex
+		align-items: center
+		+md
+			position: relative
+			top: auto
+			left: auto
+		
+	&__burger
+		display: none
+		position: relative
+		z-index: 2
+		width: 31px
+		height: 24px
+		padding: 5px
+		margin-right: -5px
+		+md
+			display: block
+		&-line
+			position: absolute
+			height: 2px
+			left: 5px
+			width: calc(100% - 10px)
+			background-color: #1c1b1a
+			&:nth-child(1)
+				top: 5px
+			&:nth-child(2)
+				top: calc(50% - 1px)
+			&:nth-child(3)
+				bottom: 5px
+		
+	
+	&__nav
+		display: flex
+		justify-content: center
+		align-items: center
+		height: 100%
+		+md
+			opacity: 0
+			visibility: hidden
+			padding: 70px 60px
+			flex-direction: column
+			position: fixed
+			z-index: 1
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background-color: #ffffff
+			box-shadow: 0 1px 4px rgba(28, 27, 26, 0.07)
+		+sm
+			padding: 70px 30px
+		&-link
+			position: relative
+			top: -1px
+			left: 5px
+			padding: 10px
+			margin: 0 10px
+			+md
+				padding: 5px 10px
+				margin: 5px 0
+			&:before
+				pointer-events: none
+				content: ''
+				position: absolute
+				bottom: -16px
+				left: 50%
+				height: 3px
+				background: #2985F7
+				width: 0
+				transform: translateX(-50%)
+				+trs
+				+md
+					bottom: 0
+			&.is-active,
+			.no-touch &:hover
+				&:before
+					width: 100%

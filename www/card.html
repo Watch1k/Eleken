@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="format-detection" content="telephone=no">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card page</title>
+    <link href="static/css/index.min.css" rel="stylesheet">
+    <link rel="icon" href="static/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  </head>
+  <body>
+    <!-- SVG-->
+    <div class="svg-container" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <path id="a" d="M6 0l1.347 4.146h4.36L8.18 6.708l1.347 4.146L6 8.292l-3.527 2.562L3.82 6.708.294 4.146h4.359L6 0z" />
+        </defs>
+        <symbol id="icon-star" viewBox="0 0 12 11">
+          <title>Star 2</title>
+          <desc>Created using Figma</desc>
+          <use xlink:href="#a" />
+        </symbol>
+      </svg>
+    </div>
+    <!-- picture element HTML5 shiv-->
+    <script>
+      document.createElement('picture');
+    </script>
+    <!-- Header-->
+    <header class="header">
+      <div class="header__container container">
+        <a class="header__logo" href="#!">
+          <img class="header__logo-img" src="static/img/logo.svg" alt="image" title="" />
+        </a>
+        <div class="header__burger">
+          <div class="header__burger-line"></div>
+          <div class="header__burger-line"></div>
+          <div class="header__burger-line"></div>
+        </div>
+        <nav class="header__nav">
+          <a class="header__nav-link is-active" href="#!">Personal Plans</a>
+          <a class="header__nav-link" href="#!">Business Plans</a>
+          <a class="header__nav-link" href="#!">Guide</a>
+          <a class="header__nav-link" href="#!">Blog</a>
+        </nav>
+      </div>
+    </header>
+    <!-- Main content-->
+    <main class="main" data-page="card">
+      <div class="container container">
+        <div class="table-desc">
+          <div class="table-desc__title">Insurance list:</div>
+          <div class="table-desc__view">
+            <a class="table-desc__view-btn table-desc__view-btn_table" href="#!">
+              <img class="table-desc__view-btn-img" src="static/img/icons/table.svg" alt="image" title="" />
+            </a>
+            <a class="table-desc__view-btn table-desc__view-btn_card is-active" href="#!">
+              <img class="table-desc__view-btn-img" src="static/img/icons/card.svg" alt="image" title="" />
+            </a>
+          </div>
+        </div>
+        <div class="card-list">
+          <div class="card card-list__el">
+            <div class="card__company">
+              <a class="card__company-image" href="#!">
+                <img class="card__company-img" src="static/img/icons/company-1.svg" alt="image" title="" />
+              </a>
+              <div class="card__company-right">
+                <a class="card__company-title" href="#!">Insurcom</a>
+                <div class="card__company-stars" data-stars="5">
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__desc">Covering:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">Health</div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__desc">Type:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">PPO</div>
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__desc">Metal level:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__helper card__helper_color card__helper_platinum"></div>
+                <div class="card__text">Platinum</div>
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+                <div class="card__desc">Drugs:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">$15</div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+                <div class="card__desc">Primary Care Visits:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">$75</div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+                <div class="card__desc">Yearly Deductible</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">$6000</div>
+              </div>
+            </div>
+            <div class="card__price">
+              <div class="card__price-text">
+                <div class="card__price-text-lg">$356/</div>
+                <div class="card__price-text-sm">mon</div>
+              </div>
+            </div>
+            <div class="card__controls">
+              <a class="btn btn_white card__controls-btn" href="#!">Overview</a>
+              <a class="btn btn_blue card__controls-btn" href="#!">Buy</a>
+            </div>
+          </div>
+          <div class="card card-list__el">
+            <div class="card__company">
+              <a class="card__company-image" href="#!">
+                <img class="card__company-img" src="static/img/icons/company-2.svg" alt="image" title="" />
+              </a>
+              <div class="card__company-right">
+                <a class="card__company-title" href="#!">Health Ins</a>
+                <div class="card__company-stars" data-stars="3">
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__desc">Covering:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">All-in-one</div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__desc">Type:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">HMO</div>
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__desc">Metal level:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__helper card__helper_color card__helper_silver"></div>
+                <div class="card__text">Silver</div>
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+                <div class="card__desc">Drugs:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">$15</div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+                <div class="card__desc">Primary Care Visits:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">$75</div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+                <div class="card__desc">Yearly Deductible</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">$6000</div>
+              </div>
+            </div>
+            <div class="card__price">
+              <div class="card__price-text">
+                <div class="card__price-text-lg">$611/</div>
+                <div class="card__price-text-sm">mon</div>
+              </div>
+            </div>
+            <div class="card__controls">
+              <a class="btn btn_white card__controls-btn" href="#!">Overview</a>
+              <a class="btn btn_blue card__controls-btn" href="#!">Buy</a>
+            </div>
+          </div>
+          <div class="card card-list__el">
+            <div class="card__company">
+              <a class="card__company-image" href="#!">
+                <img class="card__company-img" src="static/img/icons/company-3.svg" alt="image" title="" />
+              </a>
+              <div class="card__company-right">
+                <a class="card__company-title" href="#!">Dentalife</a>
+                <div class="card__company-stars" data-stars="4">
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__desc">Covering:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">Dental</div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__desc">Type:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">EPO</div>
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__desc">Metal level:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__helper card__helper_color card__helper_gold"></div>
+                <div class="card__text">Gold</div>
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+                <div class="card__desc">Drugs:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">100%</div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+                <div class="card__desc">Primary Care Visits:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">$75</div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+                <div class="card__desc">Yearly Deductible</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">$5000</div>
+              </div>
+            </div>
+            <div class="card__price">
+              <div class="card__price-text">
+                <div class="card__price-text-lg">$283/</div>
+                <div class="card__price-text-sm">mon</div>
+              </div>
+            </div>
+            <div class="card__controls">
+              <a class="btn btn_white card__controls-btn" href="#!">Overview</a>
+              <a class="btn btn_blue card__controls-btn" href="#!">Buy</a>
+            </div>
+          </div>
+          <div class="card card-list__el">
+            <div class="card__company">
+              <a class="card__company-image" href="#!">
+                <img class="card__company-img" src="static/img/icons/company-1.svg" alt="image" title="" />
+              </a>
+              <div class="card__company-right">
+                <a class="card__company-title" href="#!">Insurcom</a>
+                <div class="card__company-stars" data-stars="5">
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__desc">Covering:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">Vision</div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__desc">Type:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">POS</div>
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__desc">Metal level:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__helper card__helper_color card__helper_bronze"></div>
+                <div class="card__text">Bronze</div>
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+                <div class="card__desc">Drugs:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">$15</div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+                <div class="card__desc">Primary Care Visits:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">$75</div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+                <div class="card__desc">Yearly Deductible</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">$6000</div>
+              </div>
+            </div>
+            <div class="card__price">
+              <div class="card__price-text">
+                <div class="card__price-text-lg">$214/</div>
+                <div class="card__price-text-sm">mon</div>
+              </div>
+            </div>
+            <div class="card__controls">
+              <a class="btn btn_white card__controls-btn" href="#!">Overview</a>
+              <a class="btn btn_blue card__controls-btn" href="#!">Buy</a>
+            </div>
+          </div>
+          <div class="card card-list__el">
+            <div class="card__company">
+              <a class="card__company-image" href="#!">
+                <img class="card__company-img" src="static/img/icons/company-1.svg" alt="image" title="" />
+              </a>
+              <div class="card__company-right">
+                <a class="card__company-title" href="#!">Insurcom</a>
+                <div class="card__company-stars" data-stars="5">
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__desc">Covering:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">Health</div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__desc">Type:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">PPO</div>
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__desc">Metal level:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__helper card__helper_color card__helper_platinum"></div>
+                <div class="card__text">Platinum</div>
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+                <div class="card__desc">Drugs:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">$15</div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+                <div class="card__desc">Primary Care Visits:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">$75</div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+                <div class="card__desc">Yearly Deductible</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">$6000</div>
+              </div>
+            </div>
+            <div class="card__price">
+              <div class="card__price-text">
+                <div class="card__price-text-lg">$356/</div>
+                <div class="card__price-text-sm">mon</div>
+              </div>
+            </div>
+            <div class="card__controls">
+              <a class="btn btn_white card__controls-btn" href="#!">Overview</a>
+              <a class="btn btn_blue card__controls-btn" href="#!">Buy</a>
+            </div>
+          </div>
+          <div class="card card-list__el">
+            <div class="card__company">
+              <a class="card__company-image" href="#!">
+                <img class="card__company-img" src="static/img/icons/company-2.svg" alt="image" title="" />
+              </a>
+              <div class="card__company-right">
+                <a class="card__company-title" href="#!">Health Ins</a>
+                <div class="card__company-stars" data-stars="3">
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__desc">Covering:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">All-in-one</div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__desc">Type:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">HMO</div>
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__desc">Metal level:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__helper card__helper_color card__helper_silver"></div>
+                <div class="card__text">Silver</div>
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+                <div class="card__desc">Drugs:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">$15</div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+                <div class="card__desc">Primary Care Visits:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">$75</div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+                <div class="card__desc">Yearly Deductible</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">$6000</div>
+              </div>
+            </div>
+            <div class="card__price">
+              <div class="card__price-text">
+                <div class="card__price-text-lg">$611/</div>
+                <div class="card__price-text-sm">mon</div>
+              </div>
+            </div>
+            <div class="card__controls">
+              <a class="btn btn_white card__controls-btn" href="#!">Overview</a>
+              <a class="btn btn_blue card__controls-btn" href="#!">Buy</a>
+            </div>
+          </div>
+          <div class="card card-list__el">
+            <div class="card__company">
+              <a class="card__company-image" href="#!">
+                <img class="card__company-img" src="static/img/icons/company-3.svg" alt="image" title="" />
+              </a>
+              <div class="card__company-right">
+                <a class="card__company-title" href="#!">Dentalife</a>
+                <div class="card__company-stars" data-stars="4">
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__desc">Covering:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">Dental</div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__desc">Type:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">EPO</div>
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__desc">Metal level:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__helper card__helper_color card__helper_gold"></div>
+                <div class="card__text">Gold</div>
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+                <div class="card__desc">Drugs:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">$15</div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+                <div class="card__desc">Primary Care Visits:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">$75</div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+                <div class="card__desc">Yearly Deductible</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">$6000</div>
+              </div>
+            </div>
+            <div class="card__price">
+              <div class="card__price-text">
+                <div class="card__price-text-lg">$283/</div>
+                <div class="card__price-text-sm">mon</div>
+              </div>
+            </div>
+            <div class="card__controls">
+              <a class="btn btn_white card__controls-btn" href="#!">Overview</a>
+              <a class="btn btn_blue card__controls-btn" href="#!">Buy</a>
+            </div>
+          </div>
+          <div class="card card-list__el">
+            <div class="card__company">
+              <a class="card__company-image" href="#!">
+                <img class="card__company-img" src="static/img/icons/company-1.svg" alt="image" title="" />
+              </a>
+              <div class="card__company-right">
+                <a class="card__company-title" href="#!">Insurcom</a>
+                <div class="card__company-stars" data-stars="5">
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                  <svg class="icon icon-star">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__desc">Covering:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">Vision</div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__desc">Type:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">POS</div>
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__desc">Metal level:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__helper card__helper_color card__helper_bronze"></div>
+                <div class="card__text">Bronze</div>
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+                <div class="card__desc">Drugs:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">$15</div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+                <div class="card__desc">Primary Care Visits:</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">&amp;75</div>
+              </div>
+            </div>
+            <div class="card__row">
+              <div class="card__row-left">
+                <div class="card__helper card__helper_info">
+                  <img class="card__helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+                </div>
+                <div class="card__desc">Yearly Deductible</div>
+              </div>
+              <div class="card__row-right">
+                <div class="card__text">$6000</div>
+              </div>
+            </div>
+            <div class="card__price">
+              <div class="card__price-text">
+                <div class="card__price-text-lg">$214/</div>
+                <div class="card__price-text-sm">mon</div>
+              </div>
+            </div>
+            <div class="card__controls">
+              <a class="btn btn_white card__controls-btn" href="#!">Overview</a>
+              <a class="btn btn_blue card__controls-btn" href="#!">Buy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer-->
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__rights">INSURE. All rights reserved 2017</div>
+        <nav class="footer__nav">
+          <a class="footer__nav-link" href="#!">Personal plans</a>
+          <a class="footer__nav-link" href="#!">Business plans</a>
+          <a class="footer__nav-link" href="#!">Guide</a>
+          <a class="footer__nav-link" href="#!">Blog</a>
+        </nav>
+      </div>
+    </footer>
+    <!-- Scripts-->
+    <script src="static/js/index.min.js"></script>
+  </body>
+</html>

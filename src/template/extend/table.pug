@@ -1,0 +1,15 @@
+extends default
+
+block main
+	main.main(data-page= dataPage)
+		+e.container.container
+			+b.table-desc
+				+e.title Insurance list:
+				+e.view
+					+e.view-btn_table(href='#!' class= listPage === true ? 'is-active': '')
+						+e.IMG.view-btn-img(src='static/img/icons/table.svg' alt='image')
+					+e.view-btn_card(href='#!' class= listPage ? '': 'is-active')
+						+e.IMG.view-btn-img(src='static/img/icons/card.svg' alt='image')
+
+			block viewToggle
+

@@ -1,0 +1,50 @@
+/* ===================================
+	 table-desc
+	 =================================== */
+.table-desc
+	display: flex
+	justify-content: space-between
+	align-items: center
+	border-bottom: 1px solid rgba(28, 27, 26, 0.1)
+	padding-bottom: 10px
+	+sm
+		justify-content: center
+	&:first-child
+		padding-top: 40px
+	
+	&__title
+		+title
+		
+	&__view
+		height: 30px
+		display: flex
+		margin-right: -15px
+		+md
+			display: none
+		&-btn
+			position: relative
+			padding: 0 15px
+			display: flex
+			align-items: center
+			&-img
+				opacity: 0.4
+				+trs
+			&_table &-img
+				position: relative
+				top: 1px
+			&.is-active &-img,
+			.no-touch &:hover &-img
+				opacity: 1
+			&:not(:first-child)
+				margin-left: 1px
+				&:before
+					content: ''
+					pointer-events: none
+					position: absolute
+					top: 0
+					left: -1px
+					bottom: 0
+					width: 1px
+					background: rgba(28, 27, 26, 0.1)
+			
+		

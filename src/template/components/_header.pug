@@ -1,0 +1,15 @@
++b.HEADER.header
+	+e.container.container
+		+e.logo(href='#!')
+			+e.IMG.logo-img(src='static/img/logo.svg' alt='image')
+		+e.burger
+			+e.burger-line
+			+e.burger-line
+			+e.burger-line
+		+e.NAV.nav
+			-navList = ['Personal Plans', 'Business Plans', 'Guide', 'Blog']
+				for el, index in navList
+					if index === 0
+						+e.nav-link(href='#!').is-active= el
+					else
+						+e.nav-link(href='#!')= el

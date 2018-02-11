@@ -1,0 +1,65 @@
+-titleList = ['Company', 'Covering', 'type', 'Metal level', 'DRugs', 'Primary Care Visits', 'Yearly Deductible', 'Price', null]
+
++b.card-list
+	each el, index in contentList
+		+b.card.__el
+			+e.company
+				+e.company-image(href='#!')
+					+e.IMG.company-img(src=`static/img/icons/${el.company[0]}.svg` alt='image')
+				+e.company-right
+					+e.company-title(href='#!')= el.company[1]
+					+e.company-stars(data-stars= el.company[2])
+						+i('star')
+						+i('star')
+						+i('star')
+						+i('star')
+						+i('star')
+			+e.row
+				+e.row-left
+					+e.desc Covering:
+				+e.row-right
+					+e.text= el.covering
+			+e.row
+				+e.row-left
+					+e.desc Type:
+				+e.row-right
+					+e.text= el.type
+					+e.helper_info
+						+e.IMG.helper-img(src='static/img/icons/info.svg' alt='image')
+			+e.row
+				+e.row-left
+					+e.desc Metal level:
+				+e.row-right
+					+e.helper_color(class= `_${el.level[0]}`)
+					+e.text= el.level[1]
+					+e.helper_info
+						+e.IMG.helper-img(src='static/img/icons/info.svg' alt='image')
+			+e.row
+				+e.row-left
+					+e.helper_info
+						+e.IMG.helper-img(src='static/img/icons/info.svg' alt='image')
+					+e.desc Drugs:
+				+e.row-right
+					+e.text= el.drugs
+			+e.row
+				+e.row-left
+					+e.helper_info
+						+e.IMG.helper-img(src='static/img/icons/info.svg' alt='image')
+					+e.desc Primary Care Visits:
+				+e.row-right
+					+e.text= el.visits
+			+e.row
+				+e.row-left
+					+e.helper_info
+						+e.IMG.helper-img(src='static/img/icons/info.svg' alt='image')
+					+e.desc Yearly Deductible
+				+e.row-right
+					+e.text= el.deductible
+			+e.price
+				+e.price-text
+					+e.price-text-lg= el.price + '/'
+					+e.price-text-sm mon
+
+			+e.controls
+				+b.btn_white.__controls-btn(href='#!') Overview
+				+b.btn_blue.__controls-btn(href='#!') Buy

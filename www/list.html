@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="format-detection" content="telephone=no">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List page</title>
+    <link href="static/css/index.min.css" rel="stylesheet">
+    <link rel="icon" href="static/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  </head>
+  <body>
+    <!-- SVG-->
+    <div class="svg-container" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <path id="a" d="M6 0l1.347 4.146h4.36L8.18 6.708l1.347 4.146L6 8.292l-3.527 2.562L3.82 6.708.294 4.146h4.359L6 0z" />
+        </defs>
+        <symbol id="icon-star" viewBox="0 0 12 11">
+          <title>Star 2</title>
+          <desc>Created using Figma</desc>
+          <use xlink:href="#a" />
+        </symbol>
+      </svg>
+    </div>
+    <!-- picture element HTML5 shiv-->
+    <script>
+      document.createElement('picture');
+    </script>
+    <!-- Header-->
+    <header class="header">
+      <div class="header__container container">
+        <a class="header__logo" href="#!">
+          <img class="header__logo-img" src="static/img/logo.svg" alt="image" title="" />
+        </a>
+        <div class="header__burger">
+          <div class="header__burger-line"></div>
+          <div class="header__burger-line"></div>
+          <div class="header__burger-line"></div>
+        </div>
+        <nav class="header__nav">
+          <a class="header__nav-link is-active" href="#!">Personal Plans</a>
+          <a class="header__nav-link" href="#!">Business Plans</a>
+          <a class="header__nav-link" href="#!">Guide</a>
+          <a class="header__nav-link" href="#!">Blog</a>
+        </nav>
+      </div>
+    </header>
+    <!-- Main content-->
+    <main class="main" data-page="list">
+      <div class="container container">
+        <div class="table-desc">
+          <div class="table-desc__title">Insurance list:</div>
+          <div class="table-desc__view">
+            <a class="table-desc__view-btn table-desc__view-btn_table is-active" href="#!">
+              <img class="table-desc__view-btn-img" src="static/img/icons/table.svg" alt="image" title="" />
+            </a>
+            <a class="table-desc__view-btn table-desc__view-btn_card" href="#!">
+              <img class="table-desc__view-btn-img" src="static/img/icons/card.svg" alt="image" title="" />
+            </a>
+          </div>
+        </div>
+        <div class="table">
+          <div class="table__row table__row_title">
+            <div class="table__td table__td_company">Company</div>
+            <div class="table__td table__td_covering">Covering</div>
+            <div class="table__td table__td_type">type</div>
+            <div class="table__td table__td_level">Metal level</div>
+            <div class="table__td table__td_drugs">DRugs</div>
+            <div class="table__td table__td_visits">Primary Care Visits</div>
+            <div class="table__td table__td_deductible">Yearly Deductible</div>
+            <div class="table__td table__td_price">Price</div>
+            <div class="table__td table__td_controls"></div>
+          </div>
+          <div class="table__row">
+            <div class="table__td table__td_company">
+              <div class="table__td-company">
+                <a class="table__td-company-image" href="#!">
+                  <img class="table__td-company-img" src="static/img/icons/company-1.svg" alt="image" title="" />
+                </a>
+                <div class="table__td-company-right">
+                  <a class="table__td-company-title" href="#!">Insurcom</a>
+                  <div class="table__td-company-stars">
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table__td table__td_covering">Health</div>
+            <div class="table__td table__td_type">
+              <div class="table__td-text">PPO</div>
+              <div class="table__td-helper table__td-helper_info">
+                <img class="table__td-helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+              </div>
+            </div>
+            <div class="table__td table__td_level">
+              <div class="table__td-helper table__td-helper_color table__td-helper_platinum"></div>
+              <div class="table__td-text">Platinum</div>
+              <div class="table__td-helper table__td-helper_info">
+                <img class="table__td-helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+              </div>
+            </div>
+            <div class="table__td table__td_drugs">
+              <div class="table__td-text">$15</div>
+            </div>
+            <div class="table__td table__td_visits">
+              <div class="table__td-text">$75</div>
+            </div>
+            <div class="table__td table__td_deductible">
+              <div class="table__td-text">$6000</div>
+            </div>
+            <div class="table__td table__td_price">
+              <div class="table__td-text">$356/mon</div>
+            </div>
+            <div class="table__td table__td_controls">
+              <a class="btn btn_white table__td-btn" href="#!">Overview</a>
+              <a class="btn btn_blue table__td-btn" href="#!">Buy</a>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__td table__td_company">
+              <div class="table__td-company">
+                <a class="table__td-company-image" href="#!">
+                  <img class="table__td-company-img" src="static/img/icons/company-2.svg" alt="image" title="" />
+                </a>
+                <div class="table__td-company-right">
+                  <a class="table__td-company-title" href="#!">Health Ins</a>
+                  <div class="table__td-company-stars">
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table__td table__td_covering">All-in-one</div>
+            <div class="table__td table__td_type">
+              <div class="table__td-text">HMO</div>
+              <div class="table__td-helper table__td-helper_info">
+                <img class="table__td-helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+              </div>
+            </div>
+            <div class="table__td table__td_level">
+              <div class="table__td-helper table__td-helper_color table__td-helper_silver"></div>
+              <div class="table__td-text">Silver</div>
+              <div class="table__td-helper table__td-helper_info">
+                <img class="table__td-helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+              </div>
+            </div>
+            <div class="table__td table__td_drugs">
+              <div class="table__td-text">100%</div>
+            </div>
+            <div class="table__td table__td_visits">
+              <div class="table__td-text">$45</div>
+            </div>
+            <div class="table__td table__td_deductible">
+              <div class="table__td-text">$4500</div>
+            </div>
+            <div class="table__td table__td_price">
+              <div class="table__td-text">$611/mon</div>
+            </div>
+            <div class="table__td table__td_controls">
+              <a class="btn btn_white table__td-btn" href="#!">Overview</a>
+              <a class="btn btn_blue table__td-btn" href="#!">Buy</a>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__td table__td_company">
+              <div class="table__td-company">
+                <a class="table__td-company-image" href="#!">
+                  <img class="table__td-company-img" src="static/img/icons/company-3.svg" alt="image" title="" />
+                </a>
+                <div class="table__td-company-right">
+                  <a class="table__td-company-title" href="#!">Dentalife</a>
+                  <div class="table__td-company-stars">
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table__td table__td_covering">Dental</div>
+            <div class="table__td table__td_type">
+              <div class="table__td-text">EPO</div>
+              <div class="table__td-helper table__td-helper_info">
+                <img class="table__td-helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+              </div>
+            </div>
+            <div class="table__td table__td_level">
+              <div class="table__td-helper table__td-helper_color table__td-helper_gold"></div>
+              <div class="table__td-text">Gold</div>
+              <div class="table__td-helper table__td-helper_info">
+                <img class="table__td-helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+              </div>
+            </div>
+            <div class="table__td table__td_drugs">
+              <div class="table__td-text">100%</div>
+            </div>
+            <div class="table__td table__td_visits">
+              <div class="table__td-text">$75</div>
+            </div>
+            <div class="table__td table__td_deductible">
+              <div class="table__td-text">$5000</div>
+            </div>
+            <div class="table__td table__td_price">
+              <div class="table__td-text">$283/mon</div>
+            </div>
+            <div class="table__td table__td_controls">
+              <a class="btn btn_white table__td-btn" href="#!">Overview</a>
+              <a class="btn btn_blue table__td-btn" href="#!">Buy</a>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__td table__td_company">
+              <div class="table__td-company">
+                <a class="table__td-company-image" href="#!">
+                  <img class="table__td-company-img" src="static/img/icons/company-1.svg" alt="image" title="" />
+                </a>
+                <div class="table__td-company-right">
+                  <a class="table__td-company-title" href="#!">Insurcom</a>
+                  <div class="table__td-company-stars">
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table__td table__td_covering">Vision</div>
+            <div class="table__td table__td_type">
+              <div class="table__td-text">POS</div>
+              <div class="table__td-helper table__td-helper_info">
+                <img class="table__td-helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+              </div>
+            </div>
+            <div class="table__td table__td_level">
+              <div class="table__td-helper table__td-helper_color table__td-helper_bronze"></div>
+              <div class="table__td-text">Bronze</div>
+              <div class="table__td-helper table__td-helper_info">
+                <img class="table__td-helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+              </div>
+            </div>
+            <div class="table__td table__td_drugs">
+              <div class="table__td-text">100%</div>
+            </div>
+            <div class="table__td table__td_visits">
+              <div class="table__td-text">$60</div>
+            </div>
+            <div class="table__td table__td_deductible">
+              <div class="table__td-text">$2600</div>
+            </div>
+            <div class="table__td table__td_price">
+              <div class="table__td-text">$214/mon</div>
+            </div>
+            <div class="table__td table__td_controls">
+              <a class="btn btn_white table__td-btn" href="#!">Overview</a>
+              <a class="btn btn_blue table__td-btn" href="#!">Buy</a>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__td table__td_company">
+              <div class="table__td-company">
+                <a class="table__td-company-image" href="#!">
+                  <img class="table__td-company-img" src="static/img/icons/company-4.svg" alt="image" title="" />
+                </a>
+                <div class="table__td-company-right">
+                  <a class="table__td-company-title" href="#!">Medicon</a>
+                  <div class="table__td-company-stars">
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table__td table__td_covering">Health</div>
+            <div class="table__td table__td_type">
+              <div class="table__td-text">PPO</div>
+              <div class="table__td-helper table__td-helper_info">
+                <img class="table__td-helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+              </div>
+            </div>
+            <div class="table__td table__td_level">
+              <div class="table__td-helper table__td-helper_color table__td-helper_catastrophic"></div>
+              <div class="table__td-text">Catastrophic</div>
+              <div class="table__td-helper table__td-helper_info">
+                <img class="table__td-helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+              </div>
+            </div>
+            <div class="table__td table__td_drugs">
+              <div class="table__td-text">$20</div>
+            </div>
+            <div class="table__td table__td_visits">
+              <div class="table__td-text">40%</div>
+            </div>
+            <div class="table__td table__td_deductible">
+              <div class="table__td-text">$6000</div>
+            </div>
+            <div class="table__td table__td_price">
+              <div class="table__td-text">$300/mon</div>
+            </div>
+            <div class="table__td table__td_controls">
+              <a class="btn btn_white table__td-btn" href="#!">Overview</a>
+              <a class="btn btn_blue table__td-btn" href="#!">Buy</a>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__td table__td_company">
+              <div class="table__td-company">
+                <a class="table__td-company-image" href="#!">
+                  <img class="table__td-company-img" src="static/img/icons/company-2.svg" alt="image" title="" />
+                </a>
+                <div class="table__td-company-right">
+                  <a class="table__td-company-title" href="#!">Health Ins</a>
+                  <div class="table__td-company-stars">
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table__td table__td_covering">Dental</div>
+            <div class="table__td table__td_type">
+              <div class="table__td-text">POS</div>
+              <div class="table__td-helper table__td-helper_info">
+                <img class="table__td-helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+              </div>
+            </div>
+            <div class="table__td table__td_level">
+              <div class="table__td-helper table__td-helper_color table__td-helper_platinum"></div>
+              <div class="table__td-text">Platinum</div>
+              <div class="table__td-helper table__td-helper_info">
+                <img class="table__td-helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+              </div>
+            </div>
+            <div class="table__td table__td_drugs">
+              <div class="table__td-text">$15</div>
+            </div>
+            <div class="table__td table__td_visits">
+              <div class="table__td-text">$75</div>
+            </div>
+            <div class="table__td table__td_deductible">
+              <div class="table__td-text">$5000</div>
+            </div>
+            <div class="table__td table__td_price">
+              <div class="table__td-text">$234/mon</div>
+            </div>
+            <div class="table__td table__td_controls">
+              <a class="btn btn_white table__td-btn" href="#!">Overview</a>
+              <a class="btn btn_blue table__td-btn" href="#!">Buy</a>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__td table__td_company">
+              <div class="table__td-company">
+                <a class="table__td-company-image" href="#!">
+                  <img class="table__td-company-img" src="static/img/icons/company-1.svg" alt="image" title="" />
+                </a>
+                <div class="table__td-company-right">
+                  <a class="table__td-company-title" href="#!">Insurcom</a>
+                  <div class="table__td-company-stars">
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table__td table__td_covering">Health</div>
+            <div class="table__td table__td_type">
+              <div class="table__td-text">HMO</div>
+              <div class="table__td-helper table__td-helper_info">
+                <img class="table__td-helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+              </div>
+            </div>
+            <div class="table__td table__td_level">
+              <div class="table__td-helper table__td-helper_color table__td-helper_gold"></div>
+              <div class="table__td-text">Gold</div>
+              <div class="table__td-helper table__td-helper_info">
+                <img class="table__td-helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+              </div>
+            </div>
+            <div class="table__td table__td_drugs">
+              <div class="table__td-text">100%</div>
+            </div>
+            <div class="table__td table__td_visits">
+              <div class="table__td-text">$45</div>
+            </div>
+            <div class="table__td table__td_deductible">
+              <div class="table__td-text">$4500</div>
+            </div>
+            <div class="table__td table__td_price">
+              <div class="table__td-text">$366/mon</div>
+            </div>
+            <div class="table__td table__td_controls">
+              <a class="btn btn_white table__td-btn" href="#!">Overview</a>
+              <a class="btn btn_blue table__td-btn" href="#!">Buy</a>
+            </div>
+          </div>
+          <div class="table__row">
+            <div class="table__td table__td_company">
+              <div class="table__td-company">
+                <a class="table__td-company-image" href="#!">
+                  <img class="table__td-company-img" src="static/img/icons/company-4.svg" alt="image" title="" />
+                </a>
+                <div class="table__td-company-right">
+                  <a class="table__td-company-title" href="#!">Medicon</a>
+                  <div class="table__td-company-stars">
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                    <svg class="icon icon-star">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-star"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table__td table__td_covering">All-in-one</div>
+            <div class="table__td table__td_type">
+              <div class="table__td-text">EPO</div>
+              <div class="table__td-helper table__td-helper_info">
+                <img class="table__td-helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+              </div>
+            </div>
+            <div class="table__td table__td_level">
+              <div class="table__td-helper table__td-helper_color table__td-helper_catastrophic"></div>
+              <div class="table__td-text">Catastrophic</div>
+              <div class="table__td-helper table__td-helper_info">
+                <img class="table__td-helper-img" src="static/img/icons/info.svg" alt="image" title="" />
+              </div>
+            </div>
+            <div class="table__td table__td_drugs">
+              <div class="table__td-text">$15</div>
+            </div>
+            <div class="table__td table__td_visits">
+              <div class="table__td-text">50%</div>
+            </div>
+            <div class="table__td table__td_deductible">
+              <div class="table__td-text">$2600</div>
+            </div>
+            <div class="table__td table__td_price">
+              <div class="table__td-text">$371/mon</div>
+            </div>
+            <div class="table__td table__td_controls">
+              <a class="btn btn_white table__td-btn" href="#!">Overview</a>
+              <a class="btn btn_blue table__td-btn" href="#!">Buy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer-->
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__rights">INSURE. All rights reserved 2017</div>
+        <nav class="footer__nav">
+          <a class="footer__nav-link" href="#!">Personal plans</a>
+          <a class="footer__nav-link" href="#!">Business plans</a>
+          <a class="footer__nav-link" href="#!">Guide</a>
+          <a class="footer__nav-link" href="#!">Blog</a>
+        </nav>
+      </div>
+    </footer>
+    <!-- Scripts-->
+    <script src="static/js/index.min.js"></script>
+  </body>
+</html>

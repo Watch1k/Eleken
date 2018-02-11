@@ -1,0 +1,85 @@
+extends ../extend/table
+
+block variables
+	-title = 'List page'
+	-dataPage = 'list'
+	-listPage = true
+	-
+		contentList = [{
+		company: ['company-1', 'Insurcom', 5],
+		covering: 'Health',
+		type: 'PPO',
+		level: ['platinum', 'Platinum'],
+		drugs: '$15',
+		visits: '$75',
+		deductible: '$6000',
+		price: '$356'
+		}, {
+		company: ['company-2', 'Health Ins', 3],
+		covering: 'All-in-one',
+		type: 'HMO',
+		level: ['silver', 'Silver'],
+		drugs: '100%',
+		visits: '$45',
+		deductible: '$4500',
+		price: '$611'
+		}, {
+		company: ['company-3', 'Dentalife', 4],
+		covering: 'Dental',
+		type: 'EPO',
+		level: ['gold', 'Gold'],
+		drugs: '100%',
+		visits: '$75',
+		deductible: '$5000',
+		price: '$283'
+		}, {
+		company: ['company-1', 'Insurcom', 5],
+		covering: 'Vision',
+		type: 'POS',
+		level: ['bronze', 'Bronze'],
+		drugs: '100%',
+		visits: '$60',
+		deductible: '$2600',
+		price: '$214'
+		}, {
+		company: ['company-4', 'Medicon', 5],
+		covering: 'Health',
+		type: 'PPO',
+		level: ['catastrophic', 'Catastrophic'],
+		drugs: '$20',
+		visits: '40%',
+		deductible: '$6000',
+		price: '$300'
+		}, {
+		company: ['company-2', 'Health Ins', 3],
+		covering: 'Dental',
+		type: 'POS',
+		level: ['platinum', 'Platinum'],
+		drugs: '$15',
+		visits: '$75',
+		deductible: '$5000',
+		price: '$234'
+		}, {
+		company: ['company-1', 'Insurcom', 5],
+		covering: 'Health',
+		type: 'HMO',
+		level: ['gold', 'Gold'],
+		drugs: '100%',
+		visits: '$45',
+		deductible: '$4500',
+		price: '$366'
+		}, {
+		company: ['company-4', 'Medicon', 5],
+		covering: 'All-in-one',
+		type: 'EPO',
+		level: ['catastrophic', 'Catastrophic'],
+		drugs: '$15',
+		visits: '50%',
+		deductible: '$2600',
+		price: '$371'
+		}]
+	-tdClassList = ['company', 'covering', 'type', 'level', 'drugs', 'visits', 'deductible', 'price', 'controls']
+
+block viewToggle
+	include includes/list
+

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>modules/dev/_helpers.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="module-Helpers.Resp.html">Resp</a></li></ul><h3>Modules</h3><ul><li><a href="module-App.html">App</a></li><li><a href="module-Common.html">Common</a></li><li><a href="module-Helpers.html">Helpers</a></li><li><a href="module-PublicAPI.html">PublicAPI</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">modules/dev/_helpers.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Commonly used constants and functions.
+ *
+ * @module Helpers
+ */
+
+/**
+ * Detect current page.
+ *
+ * @constant
+ * @type {String}
+ */
+export const currentPage = document.querySelector('main').dataset.page;
+
+/**
+ * Match media device indicator.
+ */
+export class Resp {
+	/**
+	 * Get window's current width.
+	 *
+	 * @get
+	 * @static
+	 * @return {Number}
+	 */
+	static get currWidth() {
+		return window.innerWidth;
+	}
+	
+	/**
+	 * Detect touch events.
+	 *
+	 * @get
+	 * @static
+	 * @return {Boolean}
+	 */
+	static get isTouch() {
+		return 'ontouchstart' in window;
+	}
+	
+	/**
+	 * Detect desktop device.
+	 *
+	 * @get
+	 * @static
+	 * @return {Boolean}
+	 */
+	static get isDesk() {
+		return window.matchMedia(`(min-width: 1280px)`).matches;
+	}
+	
+	/**
+	 * Detect tablet device.
+	 *
+	 * @get
+	 * @static
+	 * @return {Boolean}
+	 */
+	static get isTablet() {
+		return window.matchMedia(`(min-width: 768px) and (max-width: 1279px)`).matches;
+	}
+	
+	/**
+	 * Detect mobile device.
+	 *
+	 * @get
+	 * @static
+	 * @return {Boolean}
+	 */
+	static get isMobile() {
+		return window.matchMedia(`(max-width: 767px)`).matches;
+	}
+}
+
+/**
+ * Css class names.
+ *
+ * @constant
+ * @type {Object}
+ */
+export const css = {
+	active: 'is-active',
+	noTouch: 'no-touch'
+};
+
+/**
+ * Generate string of random letters.
+ *
+ * @param {Number} length
+ */
+export const randomString = (length = 10) => Math.random().toString(36).substr(2, length > 10 ? length : 10);
+
+/**
+ * Returns a function, that, as long as it continues to be invoked, will not be triggered.
+ *
+ * @param {Function} func
+ * @param {Object} context
+ * @param {Number} wait
+ * @param {Boolean} [immediate]
+ * @returns {Function}
+ */
+export const debounce = (func, context, wait, immediate) => {
+	let timeout;
+	
+	return () => {
+		const args = arguments;
+		
+		const later = () => {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		};
+		
+		const callNow = immediate &amp;&amp; !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+};
+
+/**
+ * Throttle function.
+ *
+ * @param {Function} fn
+ * @param {Number} [threshold]
+ * @param {Object} [scope]
+ * @returns {Function}
+ */
+export const throttle = (fn, threshold = 250, scope) => {
+	let last, deferTimer;
+	
+	return function () {
+		const context = scope || this;
+		const now = +new Date;
+		const args = arguments;
+		
+		if (last &amp;&amp; now &lt; last + threshold) {
+			clearTimeout(deferTimer);
+			deferTimer = setTimeout(() => {
+				last = now;
+				fn.apply(context, args);
+			}, threshold);
+		} else {
+			last = now;
+			fn.apply(context, args);
+		}
+	};
+};
+
+/**
+ * Converts a hex color number to 16 number
+ *
+ * @param hex {String}
+ * @return {Number}
+ */
+export const hex2number = (hex) => parseInt(hex.substring(1), 16);
+
+/**
+ * Get a random integer between `min` and `max`.
+ *
+ * @param {number} min - min number
+ * @param {number} max - max number
+ * @return {int} a random integer
+ */
+export const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
+
+/**
+ * detect IE
+ * returns version of IE or false, if browser is not Internet Explorer
+ */
+export const detectIE = () => {
+	const ua = window.navigator.userAgent;
+	
+	const msie = ua.indexOf('MSIE ');
+	if (msie > 0) {
+		// IE 10 or older => return version number
+		return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+	}
+	
+	const trident = ua.indexOf('Trident/');
+	if (trident > 0) {
+		// IE 11 => return version number
+		const rv = ua.indexOf('rv:');
+		return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+	}
+	
+	const edge = ua.indexOf('Edge/');
+	if (edge > 0) {
+		// Edge (IE 12+) => return version number
+		return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+	}
+	
+	// other browser
+	return false;
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Feb 11 2018 15:54:09 GMT+0200 (EET) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
