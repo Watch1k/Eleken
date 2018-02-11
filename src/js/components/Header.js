@@ -1,5 +1,5 @@
 import { TimelineMax, TweenMax } from 'gsap';
-import { css } from '../modules/dev/_helpers';
+import { css, debounce } from '../modules/dev/_helpers';
 
 class Header {
 	constructor() {
@@ -94,14 +94,16 @@ class Header {
 	}
 	
 	clearResize() {
-		window.addEventListener('resize', () => {
+		window.addEventListener('resize', debounce(clear, this, 250));
+		
+		function clear() {
 			this.burger.classList.remove(css.active);
 			TweenMax.set(this.burgerLines, { clearProps: 'all' });
 			TweenMax.set(this.nav, { clearProps: 'all' });
 			TweenMax.set(this.navLinks, { clearProps: 'all' });
 			this.prepareBurgerAnim();
 			this.prepareNavAnim();
-		});
+		}
 	}
 }
 

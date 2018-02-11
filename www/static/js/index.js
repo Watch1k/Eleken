@@ -324,9 +324,9 @@ exports.HeaderAPI = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _helpers = __webpack_require__(0);
-
 var _gsap = __webpack_require__(5);
+
+var _helpers = __webpack_require__(0);
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
@@ -426,16 +426,16 @@ var Header = function () {
 	}, {
 		key: 'clearResize',
 		value: function clearResize() {
-			var _this2 = this;
+			window.addEventListener('resize', (0, _helpers.debounce)(clear, this, 250));
 
-			window.addEventListener('resize', function () {
-				_this2.burger.classList.remove(_helpers.css.active);
-				_gsap.TweenMax.set(_this2.burgerLines, { clearProps: 'all' });
-				_gsap.TweenMax.set(_this2.nav, { clearProps: 'all' });
-				_gsap.TweenMax.set(_this2.navLinks, { clearProps: 'all' });
-				_this2.prepareBurgerAnim();
-				_this2.prepareNavAnim();
-			});
+			function clear() {
+				this.burger.classList.remove(_helpers.css.active);
+				_gsap.TweenMax.set(this.burgerLines, { clearProps: 'all' });
+				_gsap.TweenMax.set(this.nav, { clearProps: 'all' });
+				_gsap.TweenMax.set(this.navLinks, { clearProps: 'all' });
+				this.prepareBurgerAnim();
+				this.prepareNavAnim();
+			}
 		}
 	}, {
 		key: 'burgerActiveState',
